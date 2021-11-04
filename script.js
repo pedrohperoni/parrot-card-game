@@ -107,7 +107,6 @@ function checkIfEqual(){
 }
 
 function newGame(){
-   let text;
    if (confirm("Gostaria de iniciar uma nova partida?")){
       location.reload()
    } else {
