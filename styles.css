@@ -55,11 +55,11 @@ h1{
    display: none;   
 }
 
-.hide{
+.hide1, .hide2{
    display: none
 }
 
-.active1, .active2{
+.active1, .active2, .checked{
    display: flex;
 }
 

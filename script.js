@@ -43,3 +43,43 @@ function cardGenerator(){
          </li>`
    }
 }
+
+
+
+function flip(card){
+
+   const activeFirstCard = document.querySelector(".active1")
+   const activeSecondCard = document.querySelector(".active2")
+   if(activeFirstCard === null){
+      card.querySelector(".front").classList.add("hide1")
+      card.querySelector(".back").classList.add("active1")
+   } else if (activeSecondCard === null){
+      card.querySelector(".front").classList.add("hide2")
+      card.querySelector(".back").classList.add("active2")
+      checkIfEqual()
+   }
+
+
+}
+
+function checkIfEqual(){
+   const activeCard = document.querySelector(".active1 img")
+   const currentCard = document.querySelector(".active2 img")
+
+   const activeFirstCard = document.querySelector(".active1")
+   const activeSecondCard = document.querySelector(".active2")
+
+
+   if(activeCard.isEqualNode(currentCard)){
+      console.log("teste")
+      activeFirstCard.classList.add("checked")
+      activeFirstCard.classList.remove("active1")
+      activeSecondCard.classList.add("checked")
+      activeSecondCard.classList.remove("active2")
+   } else {
+      document.querySelector(".hide1").classList.remove("hide1")
+      document.querySelector(".hide2").classList.remove("hide2")
+      document.querySelector(".active1").classList.remove("active1")
+      document.querySelector(".active2").classList.remove("active2")
+   }
+}
