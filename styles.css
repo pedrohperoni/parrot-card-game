@@ -39,6 +39,7 @@ h1{
    align-items: center;
    justify-content: center;
 
+
 }
 
 .card img{
@@ -54,6 +55,7 @@ h1{
 .back{
    display: none;   
 }
+
 
 .hide1, .hide2{
    display: none
