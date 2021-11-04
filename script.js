@@ -76,10 +76,15 @@ function checkIfEqual(){
       activeFirstCard.classList.remove("active1")
       activeSecondCard.classList.add("checked")
       activeSecondCard.classList.remove("active2")
-   } else {
       document.querySelector(".hide1").classList.remove("hide1")
       document.querySelector(".hide2").classList.remove("hide2")
-      document.querySelector(".active1").classList.remove("active1")
-      document.querySelector(".active2").classList.remove("active2")
+   } else {
+      setTimeout(function () {
+         document.querySelector(".hide1").classList.remove("hide1")
+         document.querySelector(".hide2").classList.remove("hide2")
+         document.querySelector(".active1").classList.remove("active1")
+         document.querySelector(".active2").classList.remove("active2")
+      },1000)
+
    }
 }
