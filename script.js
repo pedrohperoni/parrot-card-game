@@ -34,20 +34,33 @@ function cardGenerator(){
    console.log(newArray)
 
 
-   let counter = 0;
-   while (counter < (cardAmount)){
-      counter++
+   for(i=0; i < cardAmount; i++){
       const list = document.querySelector("ul")
-      list.innerHTML = list.innerHTML + `
+      list.innerHTML += `
          <li class="card" data-identifier="card" onclick=flip(this)>
             <div class="front" data-identifier="front-face">
                <img src="./assets/front.png" alt="front">
             </div>
             <div class="back" data-identifier="back-face">
-               <img src="./assets/${newArray[counter-1]}.gif" alt="parrot">
+               <img src="./assets/${newArray[i]}.gif" alt="parrot">
             </div>
          </li>`
    }
+
+   // let counter = 0;
+   // while (counter < (cardAmount)){
+   //    counter++
+   //    const list = document.querySelector("ul")
+   //    list.innerHTML += `
+   //       <li class="card" data-identifier="card" onclick=flip(this)>
+   //          <div class="front" data-identifier="front-face">
+   //             <img src="./assets/front.png" alt="front">
+   //          </div>
+   //          <div class="back" data-identifier="back-face">
+   //             <img src="./assets/${newArray[counter-1]}.gif" alt="parrot">
+   //          </div>
+   //       </li>`
+   // }
 }
 
 
