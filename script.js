@@ -31,7 +31,6 @@ function cardGenerator(){
    let newArray = slicedArray.concat(duplicatedArray)
 
    newArray.sort(shuffle)
-   console.log(newArray)
 
 
    for(i=0; i < cardAmount; i++){
@@ -93,8 +92,6 @@ function checkIfEqual(){
       },1000)
    }
 
-   console.log(pairCounter)
-   console.log(numberOfPairs)
    if(pairCounter == numberOfPairs){
       setTimeout(function(){
          alert(`Parabens, voce ganhou em ${playCounter} jogadas!`)
