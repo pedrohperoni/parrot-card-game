@@ -1,17 +1,14 @@
 let cardAmount = 0;
-
 let playCounter = 0;
-
 let pairCounter = 0;
 let numberOfPairs = 0;
-
 const cards = ["bobross", "explody", "fiesta", "metal", "revertit", "triplets", "unicorn"];
+
 cards.sort(shuffle)
 
 function shuffle(){
    return Math.random() - 0.5;
 }
-
 
 countCards()
 function countCards(){
@@ -24,14 +21,12 @@ function countCards(){
    numberOfPairs = cardAmount / 2
 }
 
-
 function cardGenerator(){
    let slicedArray = cards.slice(0,(cardAmount/2));
    let duplicatedArray = slicedArray.slice()
    let newArray = slicedArray.concat(duplicatedArray)
 
    newArray.sort(shuffle)
-
 
    for(i=0; i < cardAmount; i++){
       const list = document.querySelector("ul")
@@ -47,8 +42,6 @@ function cardGenerator(){
    }
 }
 
-
-
 function flip(card){
    playCounter++
    const activeFirstCard = document.querySelector(".active1")
@@ -61,8 +54,6 @@ function flip(card){
       card.querySelector(".back").classList.add("active2")
       checkIfEqual()
    }
-
-
 }
 
 function checkIfEqual(){
@@ -71,9 +62,6 @@ function checkIfEqual(){
 
    const activeFirstCard = document.querySelector(".active1")
    const activeSecondCard = document.querySelector(".active2")
-
-
-
 
    if(activeCard.isEqualNode(currentCard)){
       activeFirstCard.classList.add("checked")
